@@ -25,10 +25,10 @@ const Listing = forwardRef((props, ref) => {
     <View style={{flex: 1}}>
       <FlatList
         ref={ref}
-        keyExtractor={(item, index) => item?.Pincode + index +flag}
+        keyExtractor={(item, index) => item?.Pincode + index + flag}
         data={props?.listArray}
         renderItem={({item, index}) => {
-          return <ListItem item={item} flag={flag}/>;
+          return <ListItem item={item} flag={flag} />;
         }}
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={renderEmpty}

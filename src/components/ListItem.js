@@ -8,7 +8,7 @@ const ListItem = props => {
     <View
       style={[
         styles.tile,
-        props?.flag ? {width: '100%'} : {width: '45%', marginLeft: '3.5%'},
+        props?.flag ? styles.singleRowTile : styles.doubleColoumnTile,
       ]}>
       <View style={{}}>
         <Image
@@ -29,7 +29,6 @@ const ListItem = props => {
     </View>
   );
 };
-
 
 export default ListItem;
 
@@ -65,5 +64,12 @@ const styles = StyleSheet.create({
   textWrap: {
     marginLeft: 10,
     flex: 1,
+  },
+  singleRowTile: {
+    width: '100%',
+  },
+  doubleColoumnTile: {
+    width: '45%',
+    marginLeft: '3.5%',
   },
 });

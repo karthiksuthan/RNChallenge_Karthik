@@ -1,38 +1,20 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React, {useRef, useState} from 'react';
-import type {Node} from 'react';
 import {
   Alert,
-  Button,
-  FlatList,
   SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
-  Text,
-  TextInput,
   useColorScheme,
   View,
 } from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 import ApiHelper from '../../helpers/ApiHelper';
-import {CustomHeader, CustomSearchInput, Listing, Loader} from '../../components';
+import {
+  CustomHeader,
+  CustomSearchInput,
+  Listing,
+  Loader,
+} from '../../components';
 
-const ListingScreen: () => Node = () => {
+const ListingScreen = () => {
   const isDarkMode = useColorScheme() === 'dark';
   const [listarray, setArray] = useState([]);
   const [hasSearched, setHasSearchedFlag] = useState(false);
@@ -69,24 +51,25 @@ const ListingScreen: () => Node = () => {
 
   return (
     <>
-    <SafeAreaView style={[backgroundStyle]}>
-      <View
-        style={{
-          flex: 1,
-          marginTop: 10,
-          marginHorizontal: 25,
-          borderWidth: 0,
-        }}>
-        <CustomHeader title={'Post Office Search'} />
-        <CustomSearchInput onSearch={handleSearchClick} />
-        <Listing ref={listRef} listArray={listarray} flag={hasSearched}/>
-      </View>
-    </SafeAreaView>
-    <Loader loadingStatus={loading}/>
+      <SafeAreaView style={[backgroundStyle]}>
+        <View style={styles.subContainer}>
+          <CustomHeader title={'Post Office Search'} />
+          <CustomSearchInput onSearch={handleSearchClick} />
+          <Listing ref={listRef} listArray={listarray} flag={hasSearched} />
+        </View>
+      </SafeAreaView>
+      <Loader loadingStatus={loading} />
     </>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  subContainer: {
+    flex: 1,
+    marginTop: 10,
+    marginHorizontal: 25,
+    borderWidth: 0,
+  },
+});
 
 export default ListingScreen;
