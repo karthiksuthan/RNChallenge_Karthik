@@ -1,3 +1,17 @@
+## Hi there reviewer :wave:
+This is __karthik__ here attempting the challenge.  
+
+The following are the arbitrary decisions i have made while attempting the challenge. 
+1. The button for search was moved to the end of the input box with an icon
+2. The list is a single coloumn one in portrait and 2 coloumns in landscape
+3. javascript alert used for warning and showing errors
+4. Used few icons(png) for buttons and listing
+5. I have. created a dummy project structure for completing challenge to be easier to modify if further changes requested in same code
+6. Styling : style object in same file for components and a separate file in same folder for screens
+7. No Splashscreens and icons added as not mentioned in challenge.
+
+
+--------original readme -------------------------
 # ReactNative Code Challenge
 
 Welcome to the Mobile app code challenge from Elsevier. This is a React Native sample repository which has a Hello World screen.
