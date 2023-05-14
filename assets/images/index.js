@@ -1,0 +1,1 @@
+export const postBoxImage = require('./postbox.png')
